@@ -1,0 +1,17 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: projeto2-mongo
+    ports:
+      -"27017:27017"
+    volumes:
+      -mongo-data:/data/db
+
+  redis:
+    image: redis:-alpine
+    contaoiner_name: projeto2-redis
+    ports:
+      -"6379:6379"
+
+volumoes:
+  mongo-data:

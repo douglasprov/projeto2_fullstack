@@ -1,0 +1,13 @@
+{
+  "name": "projeto2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix auth-service install && npm --prefix resource-service install && npm --prefix notification-service install && npm --prefix frontend install",
+    "seed": "npm --prefix auth-service run seed",
+    "dev": "concurrently -n auth,resource,notif,front -c blue,green,magenta,cyan \"npm --prefix auth-service start\" \"npm --prefix resource-service start\" \"npm --prefix notification-service start\" \"npm --prefix frontend run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
