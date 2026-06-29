@@ -26,6 +26,11 @@ UTFPR — Programação Web Fullstack.
     npm run install:all
     npm run seed
     npm run dev
+    
+    # Cria os arquivos .env a partir dos exemplos
+    cp auth-service/.env.example auth-service/.env
+    cp resource-service/.env.example resource-service/.env
+    cp notification-service/.env.example notification-service/.env
 
 Acesse o frontend em http://localhost:5173
 
